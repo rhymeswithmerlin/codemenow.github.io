@@ -7,8 +7,8 @@ const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
 const styleguide = require('sc5-styleguide');
 const sass = require('gulp-sass');
-const outputPath = 'output';;
-var deploy      = require('gulp-gh-pages');
+const outputPath = 'output';
+const deploy = require('gulp-gh-pages');
 
 
 const $ = gulpLoadPlugins();

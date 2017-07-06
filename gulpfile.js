@@ -7,7 +7,9 @@ const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
 const styleguide = require('sc5-styleguide');
 const sass = require('gulp-sass');
-const outputPath = 'output';
+const outputPath = 'output';;
+var deploy      = require('gulp-gh-pages');
+
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -200,4 +202,12 @@ gulp.task('default', () => {
     dev = false;
     runSequence(['clean', 'wiredep'], 'build', resolve);
   });
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });

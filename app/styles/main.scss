@@ -1,0 +1,93 @@
+/*
+Variables
+
+Styleguide 1
+*/
+
+/*
+Variables
+
+Styleguide 1
+*/
+$brown: brown;
+$white: #efefef;
+// Colors
+// Based on http://www.colourlovers.com/palette/4510359/Back_in_The_Day
+$black: #322D2A;
+$orange: #E7622B;
+$tan: #F8E8C6;
+$green: #6A7633;
+
+/*----------------------------------------------------------------------------
+  @end
+----------------------------------------------------------------------------*/
+$margin-left: 14px;
+
+/* Elements */
+
+body {
+  color: $black;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+header {
+  background-color: white;
+  padding-left: $margin-left;
+  position: fixed;
+  width: 100%;
+  	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px $black;
+	        box-shadow: 0 8px 6px -6px $black;
+}
+nav {
+  padding: 2em;
+  float: right;
+  a {
+    color: $orange;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 20px;
+    &:hover, &:active {
+      color: $black;
+    }
+  }
+}
+
+.coming-soon {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Classes */
+.headline-text {
+  color: $tan;
+  font-size: 3em;
+  line-height: 1.5;
+  text-align: center;
+  b {
+    color: $orange;
+  }
+}
+
+.info-section {
+  font-size: 18px;
+  margin-left: $margin-left;
+  padding: 10px 0;
+  &__title {
+    border-bottom: 2px solid $orange;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+
+.logo {
+  border-bottom: 4px solid $orange;
+  color: #322D2A;
+  display: inline-block;
+}
+
+.lead-image {
+  padding: 200px 0 280px 0;;
+  background: linear-gradient(to left, #8b86a3, #322e40);
+}

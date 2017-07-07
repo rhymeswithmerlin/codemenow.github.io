@@ -209,5 +209,5 @@ gulp.task('default', () => {
  */
 gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
-    .pipe(deploy())
+    .pipe(deploy({branch: 'master'}))
 });

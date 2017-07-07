@@ -21,8 +21,11 @@ $green: #6A7633;
 /*----------------------------------------------------------------------------
   @end
 ----------------------------------------------------------------------------*/
-$margin-left: 14px;
-
+$margin-small: 14px;
+$padding-small: 14px;
+$padding-medium: 30px;
+$padding-x-large: 200px;
+$padding-xx-large: 280px;
 /* Elements */
 
 body {
@@ -31,49 +34,50 @@ body {
   font-weight: 300;
   margin: 0;
 }
-header {
+// Header
+.header {
   background-color: white;
-  padding-left: $margin-left;
+  padding-left: $padding-small;
   position: fixed;
   width: 100%;
+  // TODO make mixin
   	-webkit-box-shadow: 0 8px 6px -6px black;
 	   -moz-box-shadow: 0 8px 6px -6px $black;
 	        box-shadow: 0 8px 6px -6px $black;
-}
-nav {
-  padding: 2em;
-  float: right;
-  a {
-    color: $orange;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 8px 20px;
-    &:hover, &:active {
-      color: $black;
-    }
-  }
+
+      &__logo {
+        border-bottom: 4px solid $orange;
+        color: #322D2A;
+        display: inline-block;
+      }
+
+      &__nav {
+        padding: 2em;
+        float: right;
+          a {
+            color: $orange;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 8px 20px;
+            &:hover, &:active {
+              color: $black;
+            }
+          }
+      }
+
 }
 
-.coming-soon {
-  font-size: 2em;
-  font-weight: bold;
-}
-
-/* Classes */
-.headline-text {
-  color: $tan;
-  font-size: 3em;
-  line-height: 1.5;
-  text-align: center;
-  b {
-    color: $orange;
-  }
-}
-
+/* Sections */
 .info-section {
   font-size: 18px;
-  margin-left: $margin-left;
+  margin-left: $margin-small;
   padding: 10px 0;
+  &__text {
+    &--coming-soon {
+        font-size: 2em;
+        font-weight: bold;
+    }
+  }
   &__title {
     border-bottom: 2px solid $orange;
     font-size: 2em;
@@ -81,13 +85,37 @@ nav {
   }
 }
 
-.logo {
-  border-bottom: 4px solid $orange;
-  color: #322D2A;
-  display: inline-block;
+.lead-section {
+  padding: $padding-x-large 0 $padding-xx-large 0;
+  background: linear-gradient(to left, #8b86a3, #322e40);
+  &__text {
+    color: $tan;
+    font-size: 3em;
+    line-height: 1.5;
+    text-align: center;
+    b {
+      color: $orange;
+    }
+  }
+  &__skills {
+    list-style: none;
+    padding-top: $padding-medium;
+    text-align: center;
+  }
+  &__skills-item {
+    background: linear-gradient(to left, #fff, #ddd);
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 2em;
+    margin: $margin-small;
+    padding: $padding-small;
+  }
+  &__skills-title {
+    color: #bfbfbf;
+  }
 }
 
-.lead-image {
-  padding: 200px 0 280px 0;;
-  background: linear-gradient(to left, #8b86a3, #322e40);
+// Modules
+.social-share {
+
 }
